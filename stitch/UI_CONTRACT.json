@@ -1,0 +1,1087 @@
+[
+  {
+    "screenId": "a3522260373042eba833d0030d9e4f76",
+    "screenTitle": "Insights - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Ops",
+        "href": "#",
+        "line": 359
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 363
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 367
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 168
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 171
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "Export JSON",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "Force Refresh",
+        "line": 266
+      },
+      {
+        "type": "button",
+        "label": "search",
+        "line": 275
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 276
+      },
+      {
+        "type": "button",
+        "label": "Copy to clipboard",
+        "line": 338
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 145
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Ops",
+        "href": "#",
+        "line": 359
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 363
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 367
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 168
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 171
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "Export JSON",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "Force Refresh",
+        "line": 266
+      },
+      {
+        "type": "button",
+        "label": "search",
+        "line": 275
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 276
+      },
+      {
+        "type": "button",
+        "label": "Copy to clipboard",
+        "line": 338
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 16,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "6944251c980c4165aefcf822d18b2ffe",
+    "screenTitle": "Five Editor - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 117
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Ops",
+        "href": "#",
+        "line": 283
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 295
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 174
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 175
+      },
+      {
+        "type": "button",
+        "label": "Format JSON",
+        "line": 258
+      },
+      {
+        "type": "input",
+        "label": "e.g. core-auth-service",
+        "inputType": "text",
+        "placeholder": "e.g. core-auth-service",
+        "line": 197
+      },
+      {
+        "type": "input",
+        "label": "Brief context about this badge",
+        "inputType": "textarea",
+        "placeholder": "Brief context about this badge",
+        "line": 210
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 225
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 240
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 263
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 117
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 140
+      },
+      {
+        "type": "link",
+        "label": "Ops",
+        "href": "#",
+        "line": 283
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 288
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 295
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 174
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 175
+      },
+      {
+        "type": "button",
+        "label": "Format JSON",
+        "line": 258
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "e.g. core-auth-service",
+        "inputType": "text",
+        "placeholder": "e.g. core-auth-service",
+        "line": 197
+      },
+      {
+        "type": "input",
+        "label": "Brief context about this badge",
+        "inputType": "textarea",
+        "placeholder": "Brief context about this badge",
+        "line": 210
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 225
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 240
+      },
+      {
+        "type": "input",
+        "label": "textarea",
+        "inputType": "textarea",
+        "line": 263
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 15,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "526a70ad06c245aea7d0dce9fc106a1b",
+    "screenTitle": "Five Operations - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 195
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 217
+      },
+      {
+        "type": "button",
+        "label": "RETRY",
+        "line": 251
+      },
+      {
+        "type": "button",
+        "label": "CREATE BADGE",
+        "line": 255
+      },
+      {
+        "type": "button",
+        "label": "filter_list",
+        "line": 267
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 291
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 307
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 323
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 339
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 355
+      },
+      {
+        "type": "button",
+        "label": "Copy JSON",
+        "line": 372
+      },
+      {
+        "type": "input",
+        "label": "Search records...",
+        "inputType": "text",
+        "placeholder": "Search records...",
+        "line": 211
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 185
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 195
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "help_outline",
+        "line": 217
+      },
+      {
+        "type": "button",
+        "label": "RETRY",
+        "line": 251
+      },
+      {
+        "type": "button",
+        "label": "CREATE BADGE",
+        "line": 255
+      },
+      {
+        "type": "button",
+        "label": "filter_list",
+        "line": 267
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 291
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 307
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 323
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 339
+      },
+      {
+        "type": "button",
+        "label": "edit",
+        "line": 355
+      },
+      {
+        "type": "button",
+        "label": "Copy JSON",
+        "line": 372
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search records...",
+        "inputType": "text",
+        "placeholder": "Search records...",
+        "line": 211
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 16,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "d195d2fe853a4d6393be48b976946260",
+    "screenTitle": "Five Editor - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 194
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 199
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 217
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 221
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 225
+      },
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 206
+      },
+      {
+        "type": "button",
+        "label": "Discard",
+        "line": 252
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 255
+      },
+      {
+        "type": "button",
+        "label": "delete",
+        "line": 328
+      },
+      {
+        "type": "button",
+        "label": "Rule",
+        "line": 331
+      },
+      {
+        "type": "button",
+        "label": "format_align_left",
+        "line": 345
+      },
+      {
+        "type": "input",
+        "label": "e.g. API Latency Monitor",
+        "inputType": "text",
+        "placeholder": "e.g. API Latency Monitor",
+        "line": 277
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 290
+      },
+      {
+        "type": "input",
+        "label": "https://",
+        "inputType": "text",
+        "placeholder": "https://",
+        "line": 301
+      },
+      {
+        "type": "input",
+        "label": "Internal notes about this monitor...",
+        "inputType": "textarea",
+        "placeholder": "Internal notes about this monitor...",
+        "line": 307
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 320
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 325
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 189
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 194
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 199
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 217
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 221
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 225
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 206
+      },
+      {
+        "type": "button",
+        "label": "Discard",
+        "line": 252
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 255
+      },
+      {
+        "type": "button",
+        "label": "delete",
+        "line": 328
+      },
+      {
+        "type": "button",
+        "label": "Rule",
+        "line": 331
+      },
+      {
+        "type": "button",
+        "label": "format_align_left",
+        "line": 345
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "e.g. API Latency Monitor",
+        "inputType": "text",
+        "placeholder": "e.g. API Latency Monitor",
+        "line": 277
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 290
+      },
+      {
+        "type": "input",
+        "label": "https://",
+        "inputType": "text",
+        "placeholder": "https://",
+        "line": 301
+      },
+      {
+        "type": "input",
+        "label": "Internal notes about this monitor...",
+        "inputType": "textarea",
+        "placeholder": "Internal notes about this monitor...",
+        "line": 307
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 320
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 325
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 18,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "8c99233e059c4a44a34042f6dcd003b4",
+    "screenTitle": "Insights - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 158
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Investigate Source",
+        "href": "#",
+        "line": 305
+      },
+      {
+        "type": "link",
+        "label": "View Latency Graph",
+        "href": "#",
+        "line": 313
+      },
+      {
+        "type": "link",
+        "label": "Review Obsolete Badges",
+        "href": "#",
+        "line": 321
+      },
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "Export JSON Summary",
+        "line": 207
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 202
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 155
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 158
+      },
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 181
+      },
+      {
+        "type": "link",
+        "label": "Investigate Source",
+        "href": "#",
+        "line": 305
+      },
+      {
+        "type": "link",
+        "label": "View Latency Graph",
+        "href": "#",
+        "line": 313
+      },
+      {
+        "type": "link",
+        "label": "Review Obsolete Badges",
+        "href": "#",
+        "line": 321
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "Export JSON Summary",
+        "line": 207
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 202
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 12,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "58266e7f3e9c4e01a2f466a6f743cc30",
+    "screenTitle": "Five Operations - BadgePing Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 165
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 170
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 174
+      },
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 143
+      },
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 200
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 302
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 358
+      },
+      {
+        "type": "button",
+        "label": "Force Ping",
+        "line": 361
+      },
+      {
+        "type": "input",
+        "label": "Search badges by ID, Name, or Tags...",
+        "inputType": "text",
+        "placeholder": "Search badges by ID, Name, or Tags...",
+        "line": 196
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Operations",
+        "href": "#",
+        "line": 165
+      },
+      {
+        "type": "link",
+        "label": "Editor",
+        "href": "#",
+        "line": 170
+      },
+      {
+        "type": "link",
+        "label": "Insights",
+        "href": "#",
+        "line": 174
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 143
+      },
+      {
+        "type": "button",
+        "label": "New Badge",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 200
+      },
+      {
+        "type": "button",
+        "label": "more_vert",
+        "line": 302
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 358
+      },
+      {
+        "type": "button",
+        "label": "Force Ping",
+        "line": 361
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search badges by ID, Name, or Tags...",
+        "inputType": "text",
+        "placeholder": "Search badges by ID, Name, or Tags...",
+        "line": 196
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 10,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
