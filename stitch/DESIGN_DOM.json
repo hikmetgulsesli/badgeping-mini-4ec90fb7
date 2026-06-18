@@ -1,0 +1,3265 @@
+{
+  "generatedAt": "2026-06-18T09:05:11.164Z",
+  "screenCount": 6,
+  "screens": {
+    "526a70ad06c245aea7d0dce9fc106a1b": {
+      "screenId": "526a70ad06c245aea7d0dce9fc106a1b",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "bg-surface-container-low",
+            "h-screen",
+            "w-64",
+            "fixed",
+            "left-0",
+            "top-0",
+            "border-r",
+            "border-outline-variant",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "text-primary",
+            "w-full",
+            "h-14",
+            "border-b",
+            "border-outline-variant",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-padding"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "p-bento-margin",
+            "flex",
+            "flex-col",
+            "gap-bento-margin",
+            "overflow-hidden"
+          ],
+          "childCount": 34
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "p-1.5",
+            "text-on-surface-variant",
+            "hover:bg-surface-container",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "cursor-pointer",
+            "active:scale-95",
+            "transition-transform"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "classes": [
+            "p-1.5",
+            "text-on-surface-variant",
+            "hover:bg-surface-container",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "cursor-pointer",
+            "active:scale-95",
+            "transition-transform"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "RETRY",
+          "classes": [
+            "h-8",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-surface-container",
+            "transition-colors",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "CREATE BADGE",
+          "classes": [
+            "h-8",
+            "px-4",
+            "bg-primary",
+            "text-on-primary",
+            "rounded-DEFAULT",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "filter_list",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "classes": [
+            "text-primary",
+            "hover:bg-primary-fixed",
+            "hover:text-on-primary-fixed",
+            "p-1",
+            "rounded",
+            "transition-colors",
+            "inline-flex",
+            "items-center"
+          ],
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Copy JSON",
+          "classes": [
+            "p-1",
+            "text-outline",
+            "hover:text-on-surface",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "transition-colors"
+          ],
+          "icon": "content_copy",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search records...",
+          "placeholder": "Search records...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "h-8",
+            "pl-9",
+            "pr-3",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:border-transparent",
+            "placeholder-on-surface-variant",
+            "transition-shadow"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit_note",
+        "analytics",
+        "settings",
+        "search",
+        "help_outline",
+        "refresh",
+        "add",
+        "filter_list",
+        "edit",
+        "content_copy"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAnij37q1T7TbKG-NDmuzb1xsEvQKnHro850Vh5dMPtA0zjzSqAuQRt4luq9rWOo39VwnJxcb-dlZBS30tdKppsuIn49uQFYRxEZHMfHVjo29aoE5gP3aFB_EiJN3ApWoFaPk3GRe3_DW8IkMujiT",
+          "alt": "System Logo"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqvfXXGgMCNjPE8n8haGulLadUcYHcYt3JRTtN6wpMcUOS5yGtl_Tq3XbpmCkarR1bMAcG4xsSXfHLjPj0-q6oQroy3LOOSGx2JmucxMJsTd4r3xZ0mJ9pLTNQxOB67go-pX4brGLlVLgtNxc6Eb",
+          "alt": "User avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "RETRY",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "CREATE BADGE",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "filter_list",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "edit",
+          "icon": "edit",
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Copy JSON",
+          "icon": "content_copy",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search records...",
+          "type": "text",
+          "placeholder": "Search records...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Five Operations - BadgePing Mini"
+    },
+    "58266e7f3e9c4e01a2f466a6f743cc30": {
+      "screenId": "58266e7f3e9c4e01a2f466a6f743cc30",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-margin",
+            "h-10",
+            "max-w-full",
+            "bg-background",
+            "border-b"
+          ],
+          "childCount": 1
+        },
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-md",
+            "gap-base",
+            "bg-surface-container-lowest",
+            "border-r",
+            "border-outline-variant",
+            "w-64"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "h-full",
+            "overflow-hidden",
+            "pt-10",
+            "md:pt-0",
+            "relative",
+            "bg-background"
+          ],
+          "childCount": 75
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "classes": [
+            "bg-primary-container",
+            "text-on-primary-container",
+            "font-label-caps",
+            "text-label-caps",
+            "px-md",
+            "py-base",
+            "rounded",
+            "flex",
+            "items-center",
+            "gap-base",
+            "h-8"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "h-8",
+            "px-sm",
+            "flex",
+            "items-center",
+            "gap-sm",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "bg-surface-container-low",
+            "hover:bg-surface-container-highest",
+            "text-on-surface-variant",
+            "text-body-sm",
+            "font-body-sm",
+            "transition-colors"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-background",
+            "transition-colors"
+          ],
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "classes": [
+            "flex-1",
+            "h-8",
+            "bg-surface-container-highest",
+            "hover:bg-outline-variant",
+            "text-on-background",
+            "font-body-sm",
+            "text-body-sm",
+            "rounded",
+            "border",
+            "border-outline-variant",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Ping",
+          "classes": [
+            "flex-1",
+            "h-8",
+            "bg-primary",
+            "text-on-primary",
+            "font-body-sm",
+            "text-body-sm",
+            "rounded",
+            "hover:bg-primary-fixed-dim",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-xs"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search badges by ID, Name, or Tags...",
+          "placeholder": "Search badges by ID, Name, or Tags...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container",
+            "h-8",
+            "rounded",
+            "border",
+            "border-outline-variant",
+            "text-body-sm",
+            "font-body-sm",
+            "text-on-background",
+            "pl-xl",
+            "pr-sm",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "focus:outline-none",
+            "transition-colors",
+            "placeholder:text-outline"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "edit",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "add",
+        "dns",
+        "dashboard",
+        "edit",
+        "analytics",
+        "search",
+        "filter_list",
+        "more_vert",
+        "error",
+        "refresh"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Inter",
+        "Geist",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 4,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Ping",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search badges by ID, Name, or Tags...",
+          "type": "text",
+          "placeholder": "Search badges by ID, Name, or Tags...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "icon": "add",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Five Operations - BadgePing Mini"
+    },
+    "6944251c980c4165aefcf822d18b2ffe": {
+      "screenId": "6944251c980c4165aefcf822d18b2ffe",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest",
+            "h-screen",
+            "w-64",
+            "fixed",
+            "left-0",
+            "top-0",
+            "border-r",
+            "border-outline-variant",
+            "dark:border-outline"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "h-14",
+            "border-b",
+            "border-outline-variant",
+            "dark:border-outline",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-padding"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "md:ml-64",
+            "mt-14",
+            "md:mt-0",
+            "p-bento-margin",
+            "overflow-y-auto",
+            "w-full",
+            "max-w-5xl",
+            "mx-auto",
+            "h-full"
+          ],
+          "childCount": 24
+        },
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "h-16",
+            "border-t",
+            "border-outline-variant",
+            "dark:border-outline",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full"
+          ],
+          "childCount": 1
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "classes": [
+            "h-8",
+            "px-4",
+            "font-label-caps",
+            "text-label-caps",
+            "text-on-surface-variant",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "active:scale-95"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "classes": [
+            "h-8",
+            "px-4",
+            "font-label-caps",
+            "text-label-caps",
+            "bg-primary",
+            "text-on-primary",
+            "rounded",
+            "hover:bg-primary/90",
+            "transition-colors",
+            "active:scale-95",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Format JSON",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "format_align_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "hub",
+          "classes": [],
+          "icon": "hub",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "e.g. core-auth-service",
+          "placeholder": "e.g. core-auth-service",
+          "name": "badgeName",
+          "classes": [
+            "w-full",
+            "h-8",
+            "px-3",
+            "font-body-sm",
+            "text-body-sm",
+            "border-error",
+            "text-on-surface",
+            "bg-error-container/10",
+            "rounded",
+            "focus:ring-2",
+            "focus:ring-error",
+            "focus:border-error",
+            "focus:outline-none",
+            "transition-all",
+            "placeholder:text-on-surface-variant/50"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "Brief context about this badge's purpose...",
+          "placeholder": "Brief context about this badge's purpose...",
+          "name": "description",
+          "classes": [
+            "w-full",
+            "p-3",
+            "font-body-sm",
+            "text-body-sm",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "bg-surface-container-lowest",
+            "rounded",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:border-primary",
+            "focus:outline-none",
+            "transition-all",
+            "placeholder:text-on-surface-variant/50",
+            "resize-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "status",
+          "placeholder": "",
+          "name": "status",
+          "classes": [
+            "w-full",
+            "h-8",
+            "px-3",
+            "font-body-sm",
+            "text-body-sm",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "bg-surface-container-lowest",
+            "rounded",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:border-primary",
+            "focus:outline-none",
+            "transition-all",
+            "appearance-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "checkbox",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "sr-only",
+            "peer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "textarea",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "h-full",
+            "min-h-[200px]",
+            "p-2",
+            "font-mono-data",
+            "text-mono-data",
+            "bg-transparent",
+            "border-none",
+            "focus:ring-0",
+            "resize-none",
+            "outline-none",
+            "text-[#334155]",
+            "leading-relaxed"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-[10px]",
+            "leading-none"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "edit_note",
+          "href": "#",
+          "classes": [],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "hub",
+        "dashboard",
+        "edit_note",
+        "analytics",
+        "settings",
+        "help_outline",
+        "save",
+        "error",
+        "warning",
+        "expand_more",
+        "data_object",
+        "format_align_left"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "edit_note",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "Format JSON",
+          "icon": "format_align_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "hub",
+          "icon": "hub",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "e.g. core-auth-service",
+          "type": "text",
+          "placeholder": "e.g. core-auth-service",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Brief context about this badge's purpose...",
+          "type": "textarea",
+          "placeholder": "Brief context about this badge's purpose...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "status",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "checkbox",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "textarea",
+          "type": "textarea",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "hub",
+          "icon": "hub",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Utility v1.0",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "edit_note",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Five Editor - BadgePing Mini"
+    },
+    "8c99233e059c4a44a34042f6dcd003b4": {
+      "screenId": "8c99233e059c4a44a34042f6dcd003b4",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-margin",
+            "h-10",
+            "max-w-full",
+            "bg-surface-dim",
+            "dark:bg-surface-dim"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-md",
+            "gap-base",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-low",
+            "border-r",
+            "border-outline-variant"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-grow",
+            "flex",
+            "flex-col",
+            "h-screen",
+            "overflow-y-auto",
+            "pt-10",
+            "md:pt-0",
+            "bg-background"
+          ],
+          "childCount": 84
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "classes": [
+            "w-full",
+            "bg-surface-container-high",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "px-md",
+            "py-sm",
+            "rounded",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-xs",
+            "h-8"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON Summary",
+          "classes": [
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "px-md",
+            "py-xs",
+            "rounded",
+            "hover:bg-surface-container-highest",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-xs",
+            "h-8"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded",
+            "px-sm",
+            "py-xs",
+            "h-8",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "edit",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Investigate Source",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-primary",
+            "mt-xs",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "View Latency Graph",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-primary",
+            "mt-xs",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Review Obsolete Badges",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-label-caps",
+            "text-primary",
+            "mt-xs",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit",
+        "analytics",
+        "add",
+        "download",
+        "sync_alt",
+        "sell",
+        "pie_chart",
+        "lightbulb",
+        "error",
+        "warning",
+        "info",
+        "history"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA28Ghhfc2vNc9zk7LJTe-N8OQYfg79IxuJrzVXAa7W1DDjpiS3w3Z5zO9nZcGMZywkyM22Bij0PrQCEP1soEGkbeDAa4NWHuZDj94MTV3Nlgq4-TLNy9SXkggKwMmisoOdl8aGe-8dob4lap4YFB",
+          "alt": "System Status Avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Geist",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Investigate Source",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "View Latency Graph",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Review Obsolete Badges",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON Summary",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Insights - BadgePing Mini"
+    },
+    "a3522260373042eba833d0030d9e4f76": {
+      "screenId": "a3522260373042eba833d0030d9e4f76",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "w-64",
+            "fixed",
+            "left-0",
+            "top-0",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-container-padding",
+            "w-full",
+            "h-14",
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "border-b"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-grow",
+            "md:ml-64",
+            "mt-14",
+            "md:mt-0",
+            "p-container-padding",
+            "md:p-bento-margin",
+            "pb-24",
+            "md:pb-bento-margin",
+            "min-h-screen",
+            "bg-surface-container-low"
+          ],
+          "childCount": 49
+        },
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "md:hidden",
+            "fixed",
+            "bottom-0",
+            "left-0",
+            "w-full",
+            "h-16",
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "border-t",
+            "border-outline-variant"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "w-8",
+            "h-8",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-container",
+            "transition-colors",
+            "rounded",
+            "cursor-pointer",
+            "active:scale-95"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "classes": [
+            "w-8",
+            "h-8",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-container",
+            "transition-colors",
+            "rounded",
+            "cursor-pointer",
+            "active:scale-95"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "btn-secondary",
+            "flex-1",
+            "sm:flex-none",
+            "gap-2"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON",
+          "classes": [
+            "btn-secondary",
+            "flex-1",
+            "sm:flex-none",
+            "gap-2"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "classes": [
+            "btn-secondary",
+            "w-full",
+            "border-error",
+            "text-error",
+            "hover:bg-error-container",
+            "h-7"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Refresh",
+          "classes": [
+            "btn-secondary",
+            "w-full",
+            "h-7"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "search",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/search",
+          "expectedRoute": "/search",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Copy to clipboard",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "content_copy",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "B",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Utility v1.0",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "edit_note",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "href": "#",
+          "classes": [
+            "font-label-caps",
+            "text-[10px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "edit_note",
+        "analytics",
+        "settings",
+        "help_outline",
+        "filter_list",
+        "download",
+        "pie_chart",
+        "lightbulb",
+        "warning",
+        "info",
+        "search",
+        "more_vert",
+        "content_copy"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "1"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "help_outline",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Refresh",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "search",
+          "icon": "search",
+          "action": "navigate",
+          "route": "/search",
+          "expectedBehavior": "navigate:/search"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Copy to clipboard",
+          "icon": "content_copy",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "B",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Utility v1.0",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "B",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Utility v1.0",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Ops",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit_note",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Insights - BadgePing Mini"
+    },
+    "d195d2fe853a4d6393be48b976946260": {
+      "screenId": "d195d2fe853a4d6393be48b976946260",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "h-screen",
+            "p-md",
+            "gap-base",
+            "docked",
+            "full-height",
+            "left-0",
+            "w-64"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-margin",
+            "h-10",
+            "max-w-full",
+            "docked",
+            "full-width"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "h-full",
+            "w-full",
+            "overflow-hidden",
+            "relative",
+            "bg-background"
+          ],
+          "childCount": 33
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-xs",
+            "bg-surface-container-highest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "h-[32px]",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Discard",
+          "classes": [
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:bg-surface-container-high",
+            "px-md",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "h-[32px]",
+            "flex",
+            "items-center",
+            "justify-center",
+            "transition-colors",
+            "uppercase"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "classes": [
+            "bg-primary",
+            "text-on-primary",
+            "hover:bg-primary-container",
+            "hover:text-on-primary-container",
+            "px-md",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "h-[32px]",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-xs",
+            "transition-colors",
+            "shadow-[0_0_12px_rgba(173,198,255,0.2)]",
+            "uppercase"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "delete",
+          "classes": [
+            "w-6",
+            "h-6",
+            "flex",
+            "items-center",
+            "justify-center",
+            "rounded",
+            "hover:bg-surface-variant",
+            "text-on-surface-variant"
+          ],
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Rule",
+          "classes": [
+            "w-full",
+            "border",
+            "border-dashed",
+            "border-outline-variant",
+            "hover:border-primary",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "h-[32px]",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-xs",
+            "uppercase",
+            "bg-surface-container-lowest/50"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "format_align_left",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "format_align_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "e.g. API Latency Monitor",
+          "placeholder": "e.g. API Latency Monitor",
+          "name": "badgeName",
+          "classes": [
+            "w-full",
+            "h-[32px]",
+            "bg-surface-container-lowest",
+            "border",
+            "border-error",
+            "rounded",
+            "px-sm",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "focus:border-error",
+            "focus:ring-1",
+            "focus:ring-error",
+            "outline-none",
+            "transition-colors",
+            "pr-8"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "statusOverride",
+          "placeholder": "",
+          "name": "statusOverride",
+          "classes": [
+            "w-full",
+            "h-[32px]",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-sm",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none",
+            "appearance-none",
+            "cursor-pointer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "https://",
+          "placeholder": "https://",
+          "name": "endpointLink",
+          "classes": [
+            "w-full",
+            "h-[32px]",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-sm",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "Internal notes about this monitor...",
+          "placeholder": "Internal notes about this monitor...",
+          "name": "description",
+          "classes": [
+            "w-full",
+            "min-h-[80px]",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "p-sm",
+            "text-body-md",
+            "font-body-md",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none",
+            "transition-colors",
+            "resize-y"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "outline-none",
+            "text-on-surface",
+            "font-code-md",
+            "text-code-md",
+            "cursor-pointer"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "number",
+          "label": "number",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-20",
+            "h-[24px]",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-xs",
+            "text-code-md",
+            "font-code-md",
+            "text-on-surface",
+            "text-right",
+            "focus:border-primary",
+            "outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "font-medium"
+          ],
+          "icon": "edit",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "text-on-surface-variant",
+            "font-medium",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "h-full",
+            "pt-1"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "text-primary",
+            "border-b-2",
+            "border-primary",
+            "pb-1",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "h-full",
+            "pt-1"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "text-on-surface-variant",
+            "font-medium",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "h-full",
+            "pt-1"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "data_usage",
+        "dashboard",
+        "edit",
+        "analytics",
+        "add",
+        "warning",
+        "badge",
+        "content_copy",
+        "save",
+        "error",
+        "arrow_drop_down",
+        "chevron_right",
+        "delete",
+        "data_object",
+        "format_align_left"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-tertiary-fixed-variant": "#653e00",
+        "tertiary-fixed": "#ffddb8",
+        "surface": "#131315",
+        "on-tertiary": "#472a00",
+        "secondary": "#4edea3",
+        "on-primary-fixed-variant": "#004395",
+        "on-primary-container": "#00285d",
+        "on-primary-fixed": "#001a42",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-variant": "#353437",
+        "outline-variant": "#424754",
+        "error": "#ffb4ab",
+        "primary-fixed": "#d8e2ff",
+        "background": "#131315",
+        "on-error": "#690005",
+        "secondary-fixed": "#6ffbbe",
+        "on-surface": "#e5e1e4",
+        "on-tertiary-fixed": "#2a1700",
+        "on-error-container": "#ffdad6",
+        "primary": "#adc6ff",
+        "primary-fixed-dim": "#adc6ff",
+        "on-surface-variant": "#c2c6d6",
+        "on-primary": "#002e6a",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "on-secondary-fixed": "#002113",
+        "inverse-primary": "#005ac2",
+        "surface-tint": "#adc6ff",
+        "outline": "#8c909f",
+        "secondary-fixed-dim": "#4edea3",
+        "surface-container": "#201f22",
+        "inverse-surface": "#e5e1e4",
+        "tertiary-container": "#ca8100",
+        "surface-container-low": "#1c1b1d",
+        "surface-container-lowest": "#0e0e10",
+        "error-container": "#93000a",
+        "surface-dim": "#131315",
+        "surface-container-highest": "#353437",
+        "tertiary": "#ffb95f",
+        "on-tertiary-container": "#3e2400",
+        "primary-container": "#4d8eff",
+        "surface-bright": "#39393b",
+        "on-background": "#e5e1e4",
+        "surface-container-high": "#2a2a2c",
+        "secondary-container": "#00a572",
+        "inverse-on-surface": "#313032",
+        "on-secondary-fixed-variant": "#005236",
+        "status-pass": "#4edea3",
+        "status-pass-bg": "#d1fae5",
+        "status-warn": "#ffb95f",
+        "status-warn-bg": "#fef3c7",
+        "status-fail": "#ffb4ab",
+        "status-fail-bg": "#fee2e2"
+      },
+      "fonts": [
+        "Geist",
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "New Badge",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Discard",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "delete",
+          "icon": "delete",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "Rule",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "format_align_left",
+          "icon": "format_align_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "e.g. API Latency Monitor",
+          "type": "text",
+          "placeholder": "e.g. API Latency Monitor",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "statusOverride",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "https://",
+          "type": "text",
+          "placeholder": "https://",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Internal notes about this monitor...",
+          "type": "textarea",
+          "placeholder": "Internal notes about this monitor...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "number",
+          "type": "number",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": "edit",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "BadgePing Mini",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Five Editor - BadgePing Mini"
+    }
+  }
+}

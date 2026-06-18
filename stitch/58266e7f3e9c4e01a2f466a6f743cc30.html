@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Five Operations - BadgePing Mini</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Geist:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353437",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "surface-container-high": "#2a2a2c",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131315",
+                        "on-tertiary-container": "#3e2400",
+                        "primary": "#adc6ff",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#313032",
+                        "secondary": "#4edea3",
+                        "secondary-fixed": "#6ffbbe",
+                        "outline-variant": "#424754",
+                        "on-tertiary": "#472a00",
+                        "surface-variant": "#353437",
+                        "on-primary-fixed-variant": "#004395",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1c1b1d",
+                        "on-primary-fixed": "#001a42",
+                        "on-secondary-fixed": "#002113",
+                        "surface-tint": "#adc6ff",
+                        "on-secondary": "#003824",
+                        "on-primary-container": "#00285d",
+                        "tertiary-container": "#ca8100",
+                        "surface-bright": "#39393b",
+                        "on-surface": "#e5e1e4",
+                        "secondary-fixed-dim": "#4edea3",
+                        "surface-dim": "#131315",
+                        "tertiary": "#ffb95f",
+                        "outline": "#8c909f",
+                        "inverse-surface": "#e5e1e4",
+                        "on-surface-variant": "#c2c6d6",
+                        "inverse-primary": "#005ac2",
+                        "surface-container-lowest": "#0e0e10",
+                        "tertiary-fixed-dim": "#ffb95f",
+                        "secondary-container": "#00a572",
+                        "tertiary-fixed": "#ffddb8",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "error-container": "#93000a",
+                        "on-secondary-container": "#00311f",
+                        "on-background": "#e5e1e4",
+                        "on-primary": "#002e6a",
+                        "surface-container": "#201f22",
+                        "on-secondary-fixed-variant": "#005236",
+                        "primary-fixed": "#d8e2ff",
+                        "primary-container": "#4d8eff",
+                        "surface": "#131315",
+                        "status-pass": "#4edea3",
+                        "status-warn": "#ffb95f",
+                        "status-fail": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "base": "4px",
+                        "md": "12px",
+                        "gutter": "12px",
+                        "margin": "16px",
+                        "xs": "4px",
+                        "lg": "16px",
+                        "xl": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "code-md": ["Geist"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "code-md": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .status-glow-pass { box-shadow: 0 0 8px 0px rgba(78, 222, 163, 0.4); }
+        .status-glow-warn { box-shadow: 0 0 8px 0px rgba(255, 185, 95, 0.4); }
+        .status-glow-fail { box-shadow: 0 0 8px 0px rgba(255, 180, 171, 0.4); }
+        
+        /* Custom scrollbar for data density */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131315; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353437; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #424754; 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- Mobile Top Nav (Hidden on md) -->
+<nav class="md:hidden flex justify-between items-center w-full px-margin h-10 max-w-full bg-background border-b border-outline-variant bg-surface-dim absolute top-0 z-50">
+<div class="font-headline-sm text-headline-sm font-bold text-on-background">BadgePing Mini</div>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-md py-base rounded flex items-center gap-base h-8">
+<span class="material-symbols-outlined" style="font-size: 16px;">add</span>
+            New Badge
+        </button>
+</nav>
+<!-- SideNavBar (Desktop) -->
+<aside class="hidden md:flex flex-col h-screen p-md gap-base bg-surface-container-lowest border-r border-outline-variant w-64 z-40 shrink-0">
+<div class="flex items-center gap-sm mb-lg px-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">dns</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-black text-primary">BadgePing</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant">v1.0.2</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-body-sm text-body-sm rounded-lg h-8 flex items-center justify-center gap-sm mb-md hover:bg-primary-fixed-dim transition-colors">
+<span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+            New Badge
+        </button>
+<nav class="flex flex-col gap-base flex-grow">
+<!-- Active Nav Item -->
+<a class="bg-secondary-container text-on-secondary-container rounded-lg font-body-sm text-body-sm flex items-center gap-sm px-sm py-[6px] translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">dashboard</span>
+                Operations
+            </a>
+<!-- Inactive Nav Items -->
+<a class="text-on-surface-variant hover:bg-surface-container-high font-body-sm text-body-sm rounded-lg flex items-center gap-sm px-sm py-[6px] hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">edit</span>
+                Editor
+            </a>
+<a class="text-on-surface-variant hover:bg-surface-container-high font-body-sm text-body-sm rounded-lg flex items-center gap-sm px-sm py-[6px] hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">analytics</span>
+                Insights
+            </a>
+</nav>
+<div class="mt-auto pt-md border-t border-outline-variant">
+<div class="flex items-center gap-sm px-sm py-[6px] text-on-surface-variant font-body-sm text-body-sm">
+<div class="w-2 h-2 rounded-full bg-secondary status-glow-pass"></div>
+                System Healthy
+            </div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col h-full overflow-hidden pt-10 md:pt-0 relative bg-background">
+<!-- Header / Toolbar -->
+<header class="h-14 shrink-0 flex items-center justify-between px-lg border-b border-outline-variant bg-surface-dim relative z-10">
+<div class="flex items-center gap-md w-1/3">
+<h2 class="font-headline-sm text-headline-sm text-on-background whitespace-nowrap">Five Operations</h2>
+</div>
+<div class="flex items-center justify-center w-1/3">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant" style="font-size: 16px;">search</span>
+<input class="w-full bg-surface-container h-8 rounded border border-outline-variant text-body-sm font-body-sm text-on-background pl-xl pr-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors placeholder:text-outline" placeholder="Search badges by ID, Name, or Tags..." type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-md w-1/3">
+<button class="h-8 px-sm flex items-center gap-sm border border-outline-variant rounded bg-surface-container-low hover:bg-surface-container-highest text-on-surface-variant text-body-sm font-body-sm transition-colors">
+<span class="material-symbols-outlined" style="font-size: 16px;">filter_list</span>
+                    Filter
+                </button>
+</div>
+</header>
+<!-- Metrics Row -->
+<div class="shrink-0 p-lg border-b border-outline-variant grid grid-cols-4 gap-md bg-surface-container-lowest">
+<div class="bg-surface-container border border-outline-variant rounded p-sm flex flex-col gap-base">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Monitored</span>
+<span class="font-headline-sm text-headline-sm text-on-background">1,204</span>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded p-sm flex flex-col gap-base relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase pl-xs">Passing</span>
+<span class="font-headline-sm text-headline-sm text-secondary pl-xs">1,180</span>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded p-sm flex flex-col gap-base relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase pl-xs">Warning (Lag)</span>
+<span class="font-headline-sm text-headline-sm text-tertiary pl-xs">18</span>
+</div>
+<div class="bg-surface-container border border-error-container rounded p-sm flex flex-col gap-base relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase pl-xs">Failing (Offline)</span>
+<span class="font-headline-sm text-headline-sm text-error pl-xs">6</span>
+</div>
+</div>
+<!-- Main Workspace: Split View -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Table Section -->
+<div class="flex-1 flex flex-col overflow-hidden border-r border-outline-variant bg-surface-dim">
+<!-- Table Header -->
+<div class="grid grid-cols-[auto_1fr_120px_100px] gap-sm px-lg py-sm border-b border-outline-variant bg-surface-container-low shrink-0 items-center">
+<div class="w-8"></div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">BADGE ID / NAME</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant text-right">LATENCY</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant text-right">LAST PING</div>
+</div>
+<!-- Table Body -->
+<div class="flex-1 overflow-y-auto p-sm flex flex-col gap-[2px]">
+<!-- Row: Error (Selected) -->
+<div class="grid grid-cols-[auto_1fr_120px_100px] gap-sm px-md py-sm items-center rounded bg-surface-container-highest border border-outline-variant cursor-pointer">
+<div class="w-8 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-error status-glow-fail"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-md text-code-md text-on-background">BDG-992-AUTH</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">eu-west-1 Authentication Gateway</span>
+</div>
+<div class="text-right font-code-md text-code-md text-error">Timeout</div>
+<div class="text-right font-body-sm text-body-sm text-on-surface-variant">4m ago</div>
+</div>
+<!-- Row: Warn -->
+<div class="grid grid-cols-[auto_1fr_120px_100px] gap-sm px-md py-sm items-center rounded hover:bg-surface-container cursor-pointer transition-colors border border-transparent">
+<div class="w-8 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-tertiary status-glow-warn"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-md text-code-md text-on-background">BDG-104-DB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">us-east Read Replica Alpha</span>
+</div>
+<div class="text-right font-code-md text-code-md text-tertiary">845ms</div>
+<div class="text-right font-body-sm text-body-sm text-on-surface-variant">12s ago</div>
+</div>
+<!-- Row: Pass -->
+<div class="grid grid-cols-[auto_1fr_120px_100px] gap-sm px-md py-sm items-center rounded hover:bg-surface-container cursor-pointer transition-colors border border-transparent">
+<div class="w-8 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary status-glow-pass"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-md text-code-md text-on-background">BDG-001-CORE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Global Payment Router</span>
+</div>
+<div class="text-right font-code-md text-code-md text-on-surface-variant">42ms</div>
+<div class="text-right font-body-sm text-body-sm text-on-surface-variant">2s ago</div>
+</div>
+<!-- Row: Pass -->
+<div class="grid grid-cols-[auto_1fr_120px_100px] gap-sm px-md py-sm items-center rounded hover:bg-surface-container cursor-pointer transition-colors border border-transparent">
+<div class="w-8 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary status-glow-pass"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-code-md text-code-md text-on-background">BDG-002-CORE</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Global Payment Router B</span>
+</div>
+<div class="text-right font-code-md text-code-md text-on-surface-variant">45ms</div>
+<div class="text-right font-body-sm text-body-sm text-on-surface-variant">3s ago</div>
+</div>
+</div>
+</div>
+<!-- Detail Panel (Side Panel) -->
+<div class="w-96 bg-surface-container-lowest flex flex-col shrink-0 overflow-hidden">
+<div class="p-lg border-b border-outline-variant flex justify-between items-start bg-error-container/10">
+<div>
+<div class="flex items-center gap-sm mb-xs">
+<div class="w-2 h-2 rounded-full bg-error status-glow-fail"></div>
+<span class="font-code-md text-code-md text-error font-medium">BDG-992-AUTH</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">eu-west-1 Authentication Gateway</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-sm">Critical path auth service for European region.</p>
+</div>
+<button class="text-on-surface-variant hover:text-on-background transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-lg flex flex-col gap-xl">
+<!-- Status Card -->
+<div class="bg-surface-container rounded border border-outline-variant p-md">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-md">CURRENT STATE</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded bg-error/10 border border-error/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" style="font-size: 24px;">error</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-error">Timeout Exceeded</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Failing for 4m 12s</div>
+</div>
+</div>
+</div>
+<!-- History Graph Placeholder -->
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-sm flex justify-between items-center">
+<span>RESPONSE LATENCY (1H)</span>
+<span class="font-code-md text-code-md text-on-surface-variant opacity-50">Log Scale</span>
+</div>
+<div class="h-32 bg-surface-container border border-outline-variant rounded flex items-end p-xs gap-[2px] relative overflow-hidden">
+<!-- Simulated bars -->
+<div class="w-full h-full absolute inset-0 opacity-20 pointer-events-none" style="background: repeating-linear-gradient(0deg, transparent, transparent 19px, #424754 19px, #424754 20px);"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[20%] rounded-t-sm"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[22%] rounded-t-sm"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[19%] rounded-t-sm"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[25%] rounded-t-sm"></div>
+<div class="flex-1 bg-tertiary opacity-70 h-[60%] rounded-t-sm"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[21%] rounded-t-sm"></div>
+<div class="flex-1 bg-secondary opacity-50 h-[20%] rounded-t-sm"></div>
+<div class="flex-1 bg-error opacity-80 h-[100%] rounded-t-sm"></div>
+<div class="flex-1 bg-error opacity-80 h-[100%] rounded-t-sm"></div>
+<div class="flex-1 bg-error opacity-80 h-[100%] rounded-t-sm"></div>
+</div>
+</div>
+<!-- Config Snippet -->
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-sm">PROBE CONFIGURATION</div>
+<div class="bg-[#0e0e10] p-md rounded border border-[#27272a] font-code-md text-code-md text-on-surface-variant overflow-x-auto">
+<pre class="m-0 leading-tight"><code>{
+  "endpoint": "https://auth.eu-w1.internal",
+  "method": "GET",
+  "timeout_ms": 2000,
+  "interval_sec": 10,
+  "expect": {
+    "status": 200
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="p-md border-t border-outline-variant bg-surface-container flex gap-md">
+<button class="flex-1 h-8 bg-surface-container-highest hover:bg-outline-variant text-on-background font-body-sm text-body-sm rounded border border-outline-variant transition-colors">
+                        Acknowledge
+                    </button>
+<button class="flex-1 h-8 bg-primary text-on-primary font-body-sm text-body-sm rounded hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 16px;">refresh</span>
+                        Force Ping
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

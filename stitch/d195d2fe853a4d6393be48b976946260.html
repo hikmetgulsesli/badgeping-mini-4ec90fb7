@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Five Editor - BadgePing Mini</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+            font-size: 20px;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom scrollbar for developer tool aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131315; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #424754; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8c909f; 
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Guidelines -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#353437",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-container-high": "#2a2a2c",
+                    "on-error-container": "#ffdad6",
+                    "background": "#131315",
+                    "on-tertiary-container": "#3e2400",
+                    "primary": "#adc6ff",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#313032",
+                    "secondary": "#4edea3",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#424754",
+                    "on-tertiary": "#472a00",
+                    "surface-variant": "#353437",
+                    "on-primary-fixed-variant": "#004395",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1d",
+                    "on-primary-fixed": "#001a42",
+                    "on-secondary-fixed": "#002113",
+                    "surface-tint": "#adc6ff",
+                    "on-secondary": "#003824",
+                    "on-primary-container": "#00285d",
+                    "tertiary-container": "#ca8100",
+                    "surface-bright": "#39393b",
+                    "on-surface": "#e5e1e4",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-dim": "#131315",
+                    "tertiary": "#ffb95f",
+                    "outline": "#8c909f",
+                    "inverse-surface": "#e5e1e4",
+                    "on-surface-variant": "#c2c6d6",
+                    "inverse-primary": "#005ac2",
+                    "surface-container-lowest": "#0e0e10",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "secondary-container": "#00a572",
+                    "tertiary-fixed": "#ffddb8",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#00311f",
+                    "on-background": "#e5e1e4",
+                    "on-primary": "#002e6a",
+                    "surface-container": "#201f22",
+                    "on-secondary-fixed-variant": "#005236",
+                    "primary-fixed": "#d8e2ff",
+                    "primary-container": "#4d8eff",
+                    "surface": "#131315"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "base": "4px",
+                    "md": "12px",
+                    "gutter": "12px",
+                    "margin": "16px",
+                    "xs": "4px",
+                    "lg": "16px",
+                    "xl": "24px"
+            },
+            "fontFamily": {
+                    "headline-sm": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "code-md": [
+                            "Geist"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "headline-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "11px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "code-md": [
+                            "13px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-sm": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md h-screen w-screen overflow-hidden flex flex-col md:flex-row antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Desktop SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen p-md gap-base docked full-height left-0 w-64 border-r border-outline-variant bg-surface-container-low shrink-0 z-10">
+<!-- Brand Header -->
+<div class="flex items-center gap-sm px-sm py-md mb-sm">
+<div class="w-8 h-8 rounded bg-surface-container-highest border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined fill text-primary">data_usage</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-black text-primary">BadgePing</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">v1.0.2</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-xs flex-1">
+<!-- Inactive: Operations -->
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:bg-surface-container-high transition-colors font-body-sm text-body-sm rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Operations</span>
+</a>
+<!-- Active: Editor -->
+<a class="flex items-center gap-md px-sm py-sm bg-secondary-container text-on-secondary-container rounded-lg font-body-sm text-body-sm Active: translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined fill" data-icon="edit">edit</span>
+<span class="font-medium">Editor</span>
+</a>
+<!-- Inactive: Insights -->
+<a class="flex items-center gap-md px-sm py-sm text-on-surface-variant hover:bg-surface-container-high transition-colors font-body-sm text-body-sm rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Insights</span>
+</a>
+</nav>
+<!-- CTA Action -->
+<div class="mt-auto pt-md">
+<button class="w-full flex items-center justify-center gap-xs bg-surface-container-highest border border-outline-variant text-on-surface hover:bg-surface-bright transition-colors h-[32px] rounded font-label-caps text-label-caps">
+<span class="material-symbols-outlined" style="font-size: 16px;">add</span>
+                New Badge
+            </button>
+</div>
+</aside>
+<!-- Mobile TopNavBar -->
+<nav class="md:hidden flex justify-between items-center w-full px-margin h-10 max-w-full docked full-width top-0 border-b border-outline-variant bg-surface-dim shrink-0 z-20">
+<div class="font-headline-sm text-headline-sm font-bold text-on-background">BadgePing Mini</div>
+<div class="flex gap-md">
+<!-- Inactive -->
+<a class="text-on-surface-variant font-medium font-label-caps text-label-caps uppercase flex flex-col items-center justify-center h-full pt-1" href="#">
+                Operations
+            </a>
+<!-- Active -->
+<a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps uppercase flex flex-col items-center justify-center h-full pt-1" href="#">
+                Editor
+            </a>
+<!-- Inactive -->
+<a class="text-on-surface-variant font-medium font-label-caps text-label-caps uppercase flex flex-col items-center justify-center h-full pt-1" href="#">
+                Insights
+            </a>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 flex flex-col h-full w-full overflow-hidden relative bg-background">
+<!-- Unsaved Changes Banner -->
+<div class="w-full bg-tertiary-container/20 border-b border-tertiary-container text-on-tertiary-container px-margin py-xs flex items-center justify-center gap-sm shrink-0 z-10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-tertiary" style="font-size: 16px;">warning</span>
+<span class="font-body-sm text-body-sm text-tertiary">You have unsaved changes to this badge configuration.</span>
+</div>
+<!-- Toolbar / Header -->
+<header class="flex items-center justify-between px-lg py-md border-b border-outline-variant/50 shrink-0 bg-surface/50 backdrop-blur-md z-10">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary" style="font-size: 18px;">badge</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Edit Data Pipeline Monitor</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-xs">
+                        ID: <span class="font-code-md text-code-md">bg_prod_992x</span>
+<span class="material-symbols-outlined" style="font-size: 14px; cursor: pointer;">content_copy</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-surface border border-outline-variant text-on-surface hover:bg-surface-container-high px-md rounded font-label-caps text-label-caps h-[32px] flex items-center justify-center transition-colors uppercase">
+                    Discard
+                </button>
+<button class="bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-md rounded font-label-caps text-label-caps h-[32px] flex items-center justify-center gap-xs transition-colors shadow-[0_0_12px_rgba(173,198,255,0.2)] uppercase">
+<span class="material-symbols-outlined" style="font-size: 16px;">save</span>
+                    Save Changes
+                </button>
+</div>
+</header>
+<!-- Form Area (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-lg lg:p-xl relative">
+<!-- Atmospheric Background Texture (Subtle grid) -->
+<div class="absolute inset-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#8c909f 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl relative z-10">
+<!-- Left Column: Core Configuration -->
+<div class="lg:col-span-7 flex flex-col gap-lg">
+<!-- Section: Basic Information -->
+<section class="bg-surface-container-low border border-outline-variant rounded-lg p-md flex flex-col gap-md">
+<h3 class="font-label-caps text-label-caps text-on-surface uppercase border-b border-outline-variant/50 pb-xs mb-xs">Basic Information</h3>
+<!-- Input Group: Badge Name (WITH VALIDATION ERROR) -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex justify-between" for="badgeName">
+<span>Badge Name <span class="text-error">*</span></span>
+</label>
+<div class="relative">
+<input class="w-full h-[32px] bg-surface-container-lowest border border-error rounded px-sm text-body-md font-body-md text-on-surface focus:border-error focus:ring-1 focus:ring-error outline-none transition-colors pr-8" id="badgeName" placeholder="e.g. API Latency Monitor" type="text" value=""/>
+<span class="material-symbols-outlined text-error absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none" style="font-size: 16px;">error</span>
+</div>
+<span class="text-error font-body-sm text-body-sm mt-xs flex items-center gap-xs">
+<span class="w-1 h-1 rounded-full bg-error"></span>
+                                Badge Name is required and must be unique.
+                            </span>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<!-- Input Group: Status Override -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="statusOverride">Default Status State</label>
+<div class="relative">
+<select class="w-full h-[32px] bg-surface-container-lowest border border-outline-variant rounded px-sm text-body-md font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none cursor-pointer" id="statusOverride">
+<option class="bg-surface-container-low" value="pass">Pass (Operational)</option>
+<option class="bg-surface-container-low" selected="" value="warn">Warn (Degraded)</option>
+<option class="bg-surface-container-low" value="fail">Fail (Outage)</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant absolute right-sm top-1/2 -translate-y-1/2 pointer-events-none" style="font-size: 16px;">arrow_drop_down</span>
+</div>
+</div>
+<!-- Input Group: Endpoint Link -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="endpointLink">Target Endpoint (Optional)</label>
+<input class="w-full h-[32px] bg-surface-container-lowest border border-outline-variant rounded px-sm text-body-md font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="endpointLink" placeholder="https://" type="text" value="https://api.internal/health"/>
+</div>
+</div>
+<!-- Input Group: Description -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="description">Description / Notes</label>
+<textarea class="w-full min-h-[80px] bg-surface-container-lowest border border-outline-variant rounded p-sm text-body-md font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-y" id="description" placeholder="Internal notes about this monitor...">Monitors the primary data ingestion pipeline. Currently showing degraded performance due to upstream throttling.</textarea>
+</div>
+</section>
+<!-- Section: Thresholds & Rules -->
+<section class="bg-surface-container-low border border-outline-variant rounded-lg p-md flex flex-col gap-md opacity-70 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between border-b border-outline-variant/50 pb-xs mb-xs">
+<h3 class="font-label-caps text-label-caps text-on-surface uppercase">Alert Rules</h3>
+<span class="bg-surface-container-highest text-on-surface-variant px-xs rounded text-[10px] uppercase font-bold tracking-wider">Advanced</span>
+</div>
+<div class="flex items-center gap-sm bg-surface-container-lowest border border-outline-variant rounded p-sm">
+<div class="flex-1 flex items-center gap-sm">
+<span class="font-code-md text-code-md text-tertiary">latency_ms</span>
+<span class="material-symbols-outlined text-outline" style="font-size: 14px;">chevron_right</span>
+<select class="bg-transparent border-none outline-none text-on-surface font-code-md text-code-md cursor-pointer">
+<option>&gt;</option>
+<option>&gt;=</option>
+<option>&lt;</option>
+</select>
+<input class="w-20 h-[24px] bg-surface border border-outline-variant rounded px-xs text-code-md font-code-md text-on-surface text-right focus:border-primary outline-none" type="number" value="1500"/>
+</div>
+<div class="flex gap-xs">
+<button class="w-6 h-6 flex items-center justify-center rounded hover:bg-surface-variant text-on-surface-variant"><span class="material-symbols-outlined" style="font-size: 16px;">delete</span></button>
+</div>
+</div>
+<button class="w-full border border-dashed border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-colors h-[32px] rounded font-label-caps text-label-caps flex items-center justify-center gap-xs uppercase bg-surface-container-lowest/50">
+<span class="material-symbols-outlined" style="font-size: 16px;">add</span> Add Rule
+                        </button>
+</section>
+</div>
+<!-- Right Column: Metadata & Preview -->
+<div class="lg:col-span-5 flex flex-col gap-lg">
+<!-- Section: Metadata JSON Editor -->
+<section class="bg-surface-container-low border border-outline-variant rounded-lg flex flex-col h-[400px]">
+<div class="flex items-center justify-between px-md py-sm border-b border-outline-variant bg-surface-container-highest/50">
+<h3 class="font-label-caps text-label-caps text-on-surface uppercase flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-size: 14px;">data_object</span>
+                                Metadata Payload
+                            </h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-size: 16px;">format_align_left</span>
+</button>
+</div>
+<!-- Pseudo Code Editor -->
+<div class="flex-1 bg-[#09090b] p-sm overflow-y-auto font-code-md text-code-md leading-relaxed relative">
+<!-- Line numbers -->
+<div class="absolute left-0 top-0 bottom-0 w-8 bg-surface-container-lowest border-r border-outline-variant flex flex-col items-end py-sm pr-xs text-outline select-none opacity-50">
+<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+</div>
+<div class="pl-8 text-on-surface break-words whitespace-pre">
+<span class="text-secondary">{</span>
+<span class="text-primary">"cluster"</span>: <span class="text-tertiary">"us-east-1a"</span>,
+  <span class="text-primary">"owner_team"</span>: <span class="text-tertiary">"data-platform"</span>,
+  <span class="text-primary">"priority"</span>: <span class="text-tertiary">"P1"</span>,
+  <span class="text-primary">"runbook_url"</span>: <span class="text-tertiary">"https://wiki.corp/rb/dp-99"</span>,
+  <span class="text-primary">"tags"</span>: <span class="text-secondary">[</span>
+<span class="text-tertiary">"critical"</span>,
+    <span class="text-tertiary">"ingestion"</span>
+<span class="text-secondary">]</span>,
+  <span class="text-primary">"auto_resolve"</span>: <span class="text-secondary-fixed">true</span>
+<span class="text-secondary">}</span>
+</div>
+</div>
+</section>
+<!-- Section: Live Preview -->
+<section class="bg-surface-container-low border border-outline-variant rounded-lg p-md flex flex-col gap-md">
+<h3 class="font-label-caps text-label-caps text-on-surface uppercase border-b border-outline-variant/50 pb-xs mb-xs">Appearance Preview</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-lg flex items-center justify-center">
+<!-- Simulated Badge Preview -->
+<div class="flex items-center gap-sm bg-surface px-md py-sm rounded border border-outline-variant shadow-sm relative group cursor-pointer">
+<!-- Warning Ping Indicator -->
+<div class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-40"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary shadow-[0_0_8px_rgba(255,185,95,0.8)]"></span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate max-w-[150px]">Data Pipeline</span>
+<!-- Hover tooltip simulate -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-xs bg-inverse-surface text-inverse-on-surface text-[10px] px-xs py-[2px] rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    Degraded Performance
+                                </div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</body></html>

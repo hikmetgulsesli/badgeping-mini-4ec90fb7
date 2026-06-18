@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Five Operations - BadgePing Mini</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#574425",
+                      "tertiary-fixed": "#fcdeb5",
+                      "surface": "#fcf8fa",
+                      "on-tertiary": "#ffffff",
+                      "secondary": "#505f76",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "on-primary-container": "#7c839b",
+                      "on-primary-fixed": "#131b2e",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "surface-variant": "#e4e2e4",
+                      "outline-variant": "#c6c6cd",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#dae2fd",
+                      "background": "#fcf8fa",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#d3e4fe",
+                      "on-surface": "#1b1b1d",
+                      "on-tertiary-fixed": "#271901",
+                      "on-error-container": "#93000a",
+                      "primary": "#000000",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-surface-variant": "#45464d",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#54647a",
+                      "on-secondary-fixed": "#0b1c30",
+                      "inverse-primary": "#bec6e0",
+                      "surface-tint": "#565e74",
+                      "outline": "#76777d",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "surface-container": "#f0edef",
+                      "inverse-surface": "#303032",
+                      "tertiary-container": "#271901",
+                      "surface-container-low": "#f6f3f5",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#dcd9db",
+                      "surface-container-highest": "#e4e2e4",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#98805d",
+                      "primary-container": "#131b2e",
+                      "surface-bright": "#fcf8fa",
+                      "on-background": "#1b1b1d",
+                      "surface-container-high": "#eae7e9",
+                      "secondary-container": "#d0e1fb",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "status-pass": "#10b981",
+                      "status-pass-bg": "#d1fae5",
+                      "status-warn": "#f59e0b",
+                      "status-warn-bg": "#fef3c7",
+                      "status-fail": "#ef4444",
+                      "status-fail-bg": "#fee2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "bento-margin": "16px",
+                      "container-padding": "16px",
+                      "unit": "4px",
+                      "gap-dense": "8px",
+                      "gap-standard": "12px"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Inter", "sans-serif"
+                      ],
+                      "body-md": [
+                              "Inter", "sans-serif"
+                      ],
+                      "body-sm": [
+                              "Inter", "sans-serif"
+                      ],
+                      "mono-data": [
+                              "JetBrains Mono", "monospace"
+                      ],
+                      "label-caps": [
+                              "Inter", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "mono-data": [
+                              "12px",
+                              {
+                                      "lineHeight": "18px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "11px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Minimal Scrollbar for JSON viewer */
+        .json-scroll::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .json-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .json-scroll::-webkit-scrollbar-thumb {
+            background-color: theme('colors.outline-variant');
+            border-radius: theme('borderRadius.full');
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low h-screen w-64 fixed left-0 top-0 border-r border-outline-variant flex flex-col h-full p-gap-standard z-20">
+<div class="flex items-center gap-3 px-2 mb-8">
+<img alt="System Logo" class="w-8 h-8 rounded-DEFAULT object-cover" data-alt="A clean, modern geometric logo for a digital utility app, strictly adhering to a crisp, high-density professional aesthetic. Black and white vector art style. Calm and focused mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnij37q1T7TbKG-NDmuzb1xsEvQKnHro850Vh5dMPtA0zjzSqAuQRt4luq9rWOo39VwnJxcb-dlZBS30tdKppsuIn49uQFYRxEZHMfHVjo29aoE5gP3aFB_EiJN3ApWoFaPk3GRe3_DW8IkMujiTAL5PxqBg5hqy7wPurbTLulgw8Ez3pMzQlDyR-5ysbQhVlmBw-qI3bIVBvKQIcYQNuOhUtMcG_BbtUocE-D5HVIViaUQgdxCztKre8ZB_1Wg8lxoq5uBGLxh1Hh"/>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-black text-on-surface">BadgePing</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Utility v1.0</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<!-- Active Tab -->
+<a class="bg-secondary-container text-on-secondary-container rounded-lg flex items-center gap-3 px-3 py-2 cursor-pointer active:scale-98 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-caps text-label-caps">Operations</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer active:scale-98 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-label-caps text-label-caps">Editor</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer active:scale-98 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-caps text-label-caps">Insights</span>
+</a>
+</div>
+<div class="mt-auto">
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-all flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer active:scale-98 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-caps text-label-caps">Settings</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<div class="ml-64 flex-1 flex flex-col min-h-screen bg-background">
+<!-- TopNavBar -->
+<header class="bg-surface text-primary w-full h-14 border-b border-outline-variant flex justify-between items-center px-container-padding sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">BadgePing Mini</span>
+</div>
+<div class="flex items-center gap-4 flex-1 justify-end">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-DEFAULT h-8 pl-9 pr-3 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-on-surface-variant transition-shadow" placeholder="Search records..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="settings" class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-DEFAULT transition-colors cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button aria-label="help_outline" class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-DEFAULT transition-colors cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-outline-variant object-cover ml-2" data-alt="A tiny 32x32 digital avatar for a system administrator. Clean, abstract geometric shapes indicating a professional user profile in a high-density utility app. White background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvfXXGgMCNjPE8n8haGulLadUcYHcYt3JRTtN6wpMcUOS5yGtl_Tq3XbpmCkarR1bMAcG4xsSXfHLjPj0-q6oQroy3LOOSGx2JmucxMJsTd4r3xZ0mJ9pLTNQxOB67go-pX4brGLlVLgtNxc6EbfHSQfwANzqgTIgApa9f7qbWWh5lz8SsX4a9E8ZnuA59SkU19cpBuxJ7NRA290E8lX2DFH-tkiOn9pmfnKcWUbcaaMQxQL9t42Drq7xldPYgvgO-G3sYF-6TGag"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 p-bento-margin flex flex-col gap-bento-margin overflow-hidden">
+<!-- Metrics & Actions Header Row -->
+<div class="flex justify-between items-end">
+<div class="flex gap-gap-standard">
+<!-- Metric Chips -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT px-3 py-1.5 flex items-center gap-2 shadow-[0_4px_6px_-1px_rgb(0_0_0_/_0.05)]">
+<span class="font-label-caps text-label-caps text-on-surface-variant">TOTAL BADGES</span>
+<span class="font-headline-sm text-headline-sm">5</span>
+</div>
+<div class="bg-status-pass-bg border border-status-pass/20 rounded-DEFAULT px-3 py-1.5 flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-status-pass"></div>
+<span class="font-label-caps text-label-caps text-status-pass">PASS</span>
+<span class="font-headline-sm text-headline-sm text-status-pass">3</span>
+</div>
+<div class="bg-status-warn-bg border border-status-warn/20 rounded-DEFAULT px-3 py-1.5 flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-status-warn"></div>
+<span class="font-label-caps text-label-caps text-status-warn">WARN</span>
+<span class="font-headline-sm text-headline-sm text-status-warn">1</span>
+</div>
+<div class="bg-status-fail-bg border border-status-fail/20 rounded-DEFAULT px-3 py-1.5 flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-status-fail"></div>
+<span class="font-label-caps text-label-caps text-status-fail">FAIL</span>
+<span class="font-headline-sm text-headline-sm text-status-fail">1</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="h-8 px-3 border border-outline-variant rounded-DEFAULT flex items-center gap-2 hover:bg-surface-container transition-colors text-on-surface font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span>
+                        RETRY
+                    </button>
+<button class="h-8 px-4 bg-primary text-on-primary rounded-DEFAULT flex items-center gap-2 hover:bg-primary/90 transition-colors font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[16px]" data-icon="add">add</span>
+                        CREATE BADGE
+                    </button>
+</div>
+</div>
+<!-- Bento Layout: Table + Preview -->
+<div class="flex-1 flex gap-bento-margin min-h-0">
+<!-- Main Table Area -->
+<div class="flex-[2] bg-surface-container-lowest border border-outline-variant rounded-DEFAULT flex flex-col overflow-hidden shadow-[0_4px_6px_-1px_rgb(0_0_0_/_0.05)]">
+<div class="px-container-padding py-gap-standard border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant">OPERATIONAL RECORDS</h2>
+<button class="text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span></button>
+</div>
+<div class="flex-1 overflow-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant bg-surface-container-lowest">
+<th class="px-container-padding py-2 font-label-caps text-label-caps text-on-surface-variant font-normal">BADGE NAME</th>
+<th class="px-container-padding py-2 font-label-caps text-label-caps text-on-surface-variant font-normal">STATUS</th>
+<th class="px-container-padding py-2 font-label-caps text-label-caps text-on-surface-variant font-normal">LAST UPDATED</th>
+<th class="px-container-padding py-2 font-label-caps text-label-caps text-on-surface-variant font-normal text-right">ACTION</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Row 1 - Active/Selected State -->
+<tr class="border-b border-outline-variant bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<td class="px-container-padding py-3 font-medium">Auth_Service_Ping</td>
+<td class="px-container-padding py-3">
+<div class="inline-flex items-center gap-1.5 bg-status-pass-bg text-status-pass px-2 py-0.5 rounded-DEFAULT border border-status-pass/20 font-mono-data text-mono-data">
+<div class="w-1.5 h-1.5 rounded-full bg-status-pass"></div>
+                                            PASS
+                                        </div>
+</td>
+<td class="px-container-padding py-3 text-on-surface-variant font-mono-data text-mono-data">10:42:01 UTC</td>
+<td class="px-container-padding py-3 text-right">
+<button class="text-primary hover:bg-primary-fixed hover:text-on-primary-fixed p-1 rounded transition-colors inline-flex items-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors cursor-pointer">
+<td class="px-container-padding py-3 font-medium">Payment_Gateway_Tx</td>
+<td class="px-container-padding py-3">
+<div class="inline-flex items-center gap-1.5 bg-status-warn-bg text-status-warn px-2 py-0.5 rounded-DEFAULT border border-status-warn/20 font-mono-data text-mono-data">
+<div class="w-1.5 h-1.5 rounded-full bg-status-warn"></div>
+                                            WARN
+                                        </div>
+</td>
+<td class="px-container-padding py-3 text-on-surface-variant font-mono-data text-mono-data">10:41:15 UTC</td>
+<td class="px-container-padding py-3 text-right">
+<button class="text-on-surface-variant hover:bg-surface-container-high p-1 rounded transition-colors inline-flex items-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors cursor-pointer">
+<td class="px-container-padding py-3 font-medium">User_Data_Sync</td>
+<td class="px-container-padding py-3">
+<div class="inline-flex items-center gap-1.5 bg-status-fail-bg text-status-fail px-2 py-0.5 rounded-DEFAULT border border-status-fail/20 font-mono-data text-mono-data">
+<div class="w-1.5 h-1.5 rounded-full bg-status-fail"></div>
+                                            FAIL
+                                        </div>
+</td>
+<td class="px-container-padding py-3 text-on-surface-variant font-mono-data text-mono-data">10:39:55 UTC</td>
+<td class="px-container-padding py-3 text-right">
+<button class="text-on-surface-variant hover:bg-surface-container-high p-1 rounded transition-colors inline-flex items-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container transition-colors cursor-pointer">
+<td class="px-container-padding py-3 font-medium">Cache_Invalidation</td>
+<td class="px-container-padding py-3">
+<div class="inline-flex items-center gap-1.5 bg-status-pass-bg text-status-pass px-2 py-0.5 rounded-DEFAULT border border-status-pass/20 font-mono-data text-mono-data">
+<div class="w-1.5 h-1.5 rounded-full bg-status-pass"></div>
+                                            PASS
+                                        </div>
+</td>
+<td class="px-container-padding py-3 text-on-surface-variant font-mono-data text-mono-data">10:35:12 UTC</td>
+<td class="px-container-padding py-3 text-right">
+<button class="text-on-surface-variant hover:bg-surface-container-high p-1 rounded transition-colors inline-flex items-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container transition-colors cursor-pointer">
+<td class="px-container-padding py-3 font-medium">Notification_Queue</td>
+<td class="px-container-padding py-3">
+<div class="inline-flex items-center gap-1.5 bg-status-pass-bg text-status-pass px-2 py-0.5 rounded-DEFAULT border border-status-pass/20 font-mono-data text-mono-data">
+<div class="w-1.5 h-1.5 rounded-full bg-status-pass"></div>
+                                            PASS
+                                        </div>
+</td>
+<td class="px-container-padding py-3 text-on-surface-variant font-mono-data text-mono-data">10:30:00 UTC</td>
+<td class="px-container-padding py-3 text-right">
+<button class="text-on-surface-variant hover:bg-surface-container-high p-1 rounded transition-colors inline-flex items-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="edit">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- JSON Preview Panel (Bento Module) -->
+<div class="flex-1 bg-surface-container-lowest border border-outline-variant rounded-DEFAULT flex flex-col overflow-hidden shadow-[0_4px_6px_-1px_rgb(0_0_0_/_0.05)]">
+<div class="px-container-padding py-gap-standard border-b border-outline-variant bg-surface-container-low flex justify-between items-center">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant">PAYLOAD PREVIEW</h2>
+<span class="font-mono-data text-mono-data text-on-surface-variant">Auth_Service_Ping</span>
+</div>
+<div class="flex-1 bg-[#f1f5f9] p-container-padding overflow-auto json-scroll relative">
+<div class="absolute top-2 right-2 flex gap-1">
+<button class="p-1 text-outline hover:text-on-surface bg-surface-container-lowest border border-outline-variant rounded transition-colors" title="Copy JSON">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+</button>
+</div>
+<pre class="font-mono-data text-mono-data leading-relaxed"><span class="text-secondary">{</span>
+  <span class="text-primary font-medium">"id"</span>: <span class="text-secondary">"badge_001"</span>,
+  <span class="text-primary font-medium">"name"</span>: <span class="text-secondary">"Auth_Service_Ping"</span>,
+  <span class="text-primary font-medium">"status"</span>: <span class="text-status-pass">"PASS"</span>,
+  <span class="text-primary font-medium">"metrics"</span>: <span class="text-secondary">{</span>
+    <span class="text-primary font-medium">"latency_ms"</span>: <span class="text-on-surface-variant">42</span>,
+    <span class="text-primary font-medium">"uptime_pct"</span>: <span class="text-on-surface-variant">99.99</span>,
+    <span class="text-primary font-medium">"errors"</span>: <span class="text-on-surface-variant">0</span>
+  <span class="text-secondary">}</span>,
+  <span class="text-primary font-medium">"last_check"</span>: <span class="text-secondary">"2023-10-27T10:42:01Z"</span>,
+  <span class="text-primary font-medium">"endpoint"</span>: <span class="text-secondary">"https://api.system.local/auth/health"</span>,
+  <span class="text-primary font-medium">"tags"</span>: <span class="text-secondary">[</span>
+    <span class="text-secondary">"critical"</span>,
+    <span class="text-secondary">"core-service"</span>
+  <span class="text-secondary">]</span>,
+  <span class="text-primary font-medium">"alert_rules"</span>: <span class="text-secondary">[</span>
+    <span class="text-secondary">{</span>
+      <span class="text-primary font-medium">"condition"</span>: <span class="text-secondary">"latency_ms &gt; 200"</span>,
+      <span class="text-primary font-medium">"level"</span>: <span class="text-status-warn">"WARN"</span>
+    <span class="text-secondary">}</span>,
+    <span class="text-secondary">{</span>
+      <span class="text-primary font-medium">"condition"</span>: <span class="text-secondary">"errors &gt; 5"</span>,
+      <span class="text-primary font-medium">"level"</span>: <span class="text-status-fail">"FAIL"</span>
+    <span class="text-secondary">}</span>
+  <span class="text-secondary">]</span>
+<span class="text-secondary">}</span></pre>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

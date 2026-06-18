@@ -1,0 +1,56 @@
+[
+  {
+    "screenId": "a3522260373042eba833d0030d9e4f76",
+    "name": "Insights - BadgePing Mini",
+    "type": "app-screen",
+    "description": "Insights - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "6944251c980c4165aefcf822d18b2ffe",
+    "name": "Five Editor - BadgePing Mini",
+    "type": "form",
+    "description": "Five Editor - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_FIVE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "526a70ad06c245aea7d0dce9fc106a1b",
+    "name": "Five Operations - BadgePing Mini",
+    "type": "app-screen",
+    "description": "Five Operations - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_FIVE_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "d195d2fe853a4d6393be48b976946260",
+    "name": "Five Editor - BadgePing Mini",
+    "type": "form",
+    "description": "Five Editor - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_FIVE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "8c99233e059c4a44a34042f6dcd003b4",
+    "name": "Insights - BadgePing Mini",
+    "type": "app-screen",
+    "description": "Insights - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "58266e7f3e9c4e01a2f466a6f743cc30",
+    "name": "Five Operations - BadgePing Mini",
+    "type": "app-screen",
+    "description": "Five Operations - BadgePing Mini screen",
+    "surfaceIds": [
+      "SURF_FIVE_OPERATIONS"
+    ]
+  }
+]
